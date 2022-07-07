@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+header {
+  display: flex;
+  grid-template-rows: 2.5fr 7.5fr auto;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  // MNEU BAR
+  .enssel-header-menu-bar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0 3%;
+    background-color: white;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .enssel-logo-img {
+      padding: 5px;
+      cursor: pointer;
+
+      > a {
+        margin-left: 3%;
+        font-family: 'Passion One', sans-serif;
+        font-size: 38px;
+        font-weight: 400;
+        color: #142482;
+        text-shadow: 1px 1px 1px dimgrey;
+      }
+    }
+
+    .enssel-menu-items {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      justify-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+
+      .enssel-menu-item {
+        margin: 0 5px;
+        cursor: pointer;
+        text-align: center;
+        align-items: center;
+        line-height: 3rem;
+        display: grid;
+        width: 100px;
+
+        > span {
+          top: 0;
+          height: 2px;
+          background-color: #142482;
+          width: 0%;
+          transition: all 0.3s;
+        }
+
+        > a {
+          font-weight: 900;
+        }
+      }
+
+      .enssel-menu-item:hover {
+        > span {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // MENU ALL
+  .enssel-menu-all {
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    height: 0vh;
+    transition: all 1s;
+  }
+}
+
+header:hover{
+  .enssel-menu-all{
+    height: 25vh;
+  }
+}

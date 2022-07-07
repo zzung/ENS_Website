@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+
+<header th:fragment="header">
+    <div class="enssel-header-menu-bar">
+        <div class="enssel-logo-img">
+            <a th:href="'/enssel/'+${lang}">Enssel</a>
+        </div>
+        <div class="enssel-menu-items">
+            <div class="enssel-menu-item" name="introduce">
+                <span></span>
+                <a th:href="'/enssel/'+${lang}+'/introduce'" th:if="${lang == 'kr'}" th:text="회사정보"></a>
+                <a th:href="'/enssel/'+${lang}+'/introduce'" th:text="Introduce" th:unless="${lang == 'kr'}"></a>
+            </div>
+            <div class="enssel-menu-item" name="business">
+                <span></span>
+                <a th:href="'/enssel/'+${lang}+'/business'" th:if="${lang == 'kr'}" th:text="사업정보"></a>
+                <a th:href="'/enssel/'+${lang}+'/business'" th:text="Business" th:unless="${lang == 'kr'}"></a>
+            </div>
+            <div class="enssel-menu-item" name="e-now">
+                <span></span>
+                <a href="/enssel/e-now">E-NOW</a>
+            </div>
+            <div class="enssel-menu-item" name="contact">
+                <span></span>
+                <a th:href="'/enssel/'+${lang}+'/contact'" th:if="${lang == 'kr'}" th:text="Contact"></a>
+                <a th:href="'/enssel/'+${lang}+'/contact'" th:text="Contact" th:unless="${lang == 'kr'}"></a>
+            </div>
+            <div class="enssel-menu-item" name="language" th:if="${page=='index'}">
+                <span></span>
+                <a href="/enssel/en" th:if="${lang == 'kr'}" th:text="KOR"></a>
+                <a href="/enssel/kr" th:text="ENG" th:unless="${lang == 'kr'}"></a>
+            </div>
+        </div>
+    </div>
+    <div class="enssel-menu-all"></div>
+</header>
+
+</html>
