@@ -9,33 +9,53 @@
             <a th:href="'/enssel/'+${lang}">Enssel</a>
         </div>
         <div class="enssel-menu-items">
-            <div class="enssel-menu-item" name="introduce">
+            <div class="enssel-menu-item">
                 <span></span>
-                <a th:href="'/enssel/'+${lang}+'/introduce'" th:if="${lang == 'kr'}" th:text="회사정보"></a>
-                <a th:href="'/enssel/'+${lang}+'/introduce'" th:text="Introduce" th:unless="${lang == 'kr'}"></a>
+                <h6>회사정보</h6>
             </div>
-            <div class="enssel-menu-item" name="business">
+            <div class="enssel-menu-item">
                 <span></span>
-                <a th:href="'/enssel/'+${lang}+'/business'" th:if="${lang == 'kr'}" th:text="사업정보"></a>
-                <a th:href="'/enssel/'+${lang}+'/business'" th:text="Business" th:unless="${lang == 'kr'}"></a>
+                <h6>사업분야</h6>
             </div>
-            <div class="enssel-menu-item" name="e-now">
+            <div class="enssel-menu-item">
                 <span></span>
-                <a href="/enssel/e-now">E-NOW</a>
+                <h6>E-NOW</h6>
             </div>
-            <div class="enssel-menu-item" name="contact">
+            <div class="enssel-menu-item">
                 <span></span>
-                <a th:href="'/enssel/'+${lang}+'/contact'" th:if="${lang == 'kr'}" th:text="Contact"></a>
-                <a th:href="'/enssel/'+${lang}+'/contact'" th:text="Contact" th:unless="${lang == 'kr'}"></a>
+                <h6>CONTACT</h6>
             </div>
-            <div class="enssel-menu-item" name="language" th:if="${page=='index'}">
+            <div class="enssel-menu-item">
                 <span></span>
-                <a href="/enssel/en" th:if="${lang == 'kr'}" th:text="KOR"></a>
-                <a href="/enssel/kr" th:text="ENG" th:unless="${lang == 'kr'}"></a>
+                <h6 th:if="${lang=='kr'}"><a th:text="KOR" th:href="'/enssel/en'"></a></h6>
+                <h6 th:unless="${lang=='kr'}"><a th:text="ENG" th:href="'/enssel/kr'"></a></h6>
             </div>
         </div>
     </div>
-    <div class="enssel-menu-all"></div>
+    <div class="enssel-header-menu-detail">
+        <div class="enssel-detail-items">
+            <ul class="enssel-detail-item">
+                <li><a th:href="'/enssel/'+${lang}+'?page=introduce&display=vision'">회사비전</a></li>
+                <li><a th:href="'/enssel/'+${lang}+'?page=introduce&display=core'">핵심가치</a></li>
+                <li><a th:href="'/enssel/'+${lang}+'?page=introduce&display=history'">회사이력</a></li>
+            </ul>
+            <ul class="enssel-detail-item">
+                <li><a href="">스마트 팩토리</a></li>
+                <li><a href="">인공지능</a></li>
+                <li><a href="">반도체 장비</a></li>
+            </ul>
+            <ul class="enssel-detail-item">
+                <li><a href="">조직문화</a></li>
+                <li><a href="">엔셀 Crew</a></li>
+                <li><a href="">엔셀 소식</a></li>
+            </ul>
+            <ul class="enssel-detail-item">
+                <li><a th:href="'/enssel/'+${lang}+'?page=contact&display=map'">오시는 길</a></li>
+                <li><a th:href="'/enssel/'+${lang}+'?page=contact&display=inquiry'">제품문의</a></li>
+                <li><a th:href="'/enssel/'+${lang}+'?page=contact&display=contact'">연락처</a></li>
+            </ul>
+        </div>
+    </div>
 </header>
 
 </html>

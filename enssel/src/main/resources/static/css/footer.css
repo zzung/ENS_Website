@@ -22,6 +22,7 @@ footer .enssel-footer-menu-bar {
   justify-content: space-between;
 }
 footer .enssel-footer-menu-bar .enssel-footer-menu {
+  width: 270px;
   display: flex;
   padding: 1vh;
   flex-direction: column;
